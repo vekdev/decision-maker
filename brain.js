@@ -7,7 +7,8 @@ const answerWrapper = document.getElementById("answerWrapper")
 
 let userAnswers = []
 
-document.getElementById("addAnswer").addEventListener("click", _ => {
+document.getElementById("answerWrapper").addEventListener("submit", e => {
+    e.preventDefault()
     if (answer.value) {
         userAnswers.push(answer.value)
         populateAnswers(answer.value)
@@ -15,7 +16,8 @@ document.getElementById("addAnswer").addEventListener("click", _ => {
     }
 })
 
-document.getElementById("addQuestion").addEventListener("click", () => {
+document.getElementById("questionWrapper").addEventListener("submit", (e) => {
+    e.preventDefault()
     if (questionEntryField.value) {
         questionTextParagraph.textContent = questionEntryField.value
         questionEntryField.value = ""
@@ -25,9 +27,7 @@ document.getElementById("addQuestion").addEventListener("click", () => {
 })
 
 document.getElementById("getAnswer").addEventListener("click", e => {
-    e.preventDefault()
     const randomElement = Math.floor(Math.random() * userAnswers.length)
-
     const answerParagraphElement = document.getElementById("computerAnswer")
     if (userAnswers.length > 1) {
         answerParagraphElement.innerText = userAnswers[randomElement]
@@ -36,6 +36,8 @@ document.getElementById("getAnswer").addEventListener("click", e => {
     } else {
         answerParagraphElement.innerText = "You haven't provided any possible answers dimwit"
     }
+
+    enteredAnswersList.style.display = "none"
 })
 
 function populateAnswers(answer) {
@@ -45,6 +47,7 @@ function populateAnswers(answer) {
 }
 
 questionEntryField.addEventListener("keyup", () => {
+    console.log("KEY PRESSED")
     questionTextParagraph.textContent = questionEntryField.value
 })
 

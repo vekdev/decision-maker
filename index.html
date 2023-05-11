@@ -25,40 +25,34 @@
         <p class="intro">Time is money... don't let indecisiveness cost you! The Decision Maker is here to help.</p>
         <section class="inputs">
             <div>
-                <form>
-                    <div id="questionWrapper">
+                    <form id="questionWrapper">
                         <label for="question">Add Your Question</label>
                         <div class="form-wrapper">
                             <input type="text" name="question" id="question" placeholder="what is your question">
                             <img id="addQuestion" class="plus" src="images/plus.png" alt="">
                         </div>
-                    </div>
-                    <div id="answerWrapper">
+                    </form>
+                    <form id="answerWrapper">
                         <label for="answer">Add an answer</label>
                         <div class="form-wrapper">
                             <input type="text" placeholder="add a possible answer" name="answer" id="answer">
                             <img id="addAnswer" class="plus" src="images/plus.png" alt="">
                         </div>
-                    </div>
+                    </form>
+                    
+                    
+                </div>
+                <div>
+                    <h2>Summary</h2>
+                    <p>This is the summary of the information you have given me so far. Whenever you are ready, click the <strong>get my answer</strong> button and I will get to work!</p>
+                    <h3>Your Question</h3>
+                    <p id="questionText">
+                        This is the question right here?
+                    </p>
+                    <ul id="answers">
+                        
+                    </ul>
                     <button id="getAnswer">Get Your Answer</button>
-                
-                </form>
-            </div>
-            <div>
-                <h2>Summary</h2>
-                <p>This is the summary of the information you have given me so far. Whenever you are ready, click the <strong>get my answer</strong> button and I will get to work!</p>
-                <h3>Your Question</h3>
-                <p id="questionText">
-                    This is the question right here?
-                </p>
-                <ul id="answers">
-                    <li>This is a possible answer but longer</li>
-                    <li>This is a possible answer</li>
-                    <li>This is a possible answer</li>
-                    <li>This is a possible answer</li>
-                    <li>This is a possible answer</li>
-                    <li>This is a possible answer</li>
-                </ul>
             </div>
         </section>
         <p id="computerAnswer"></p>
