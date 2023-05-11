@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Decision Maker - Don't let indecisiveness cost you!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <script src="brain.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <p>The Decision Maker</p>
+    </header>
+
+    <main>
+        <p class="intro">Time is money... don't let indecisiveness cost you! The Decision Maker is here to help.</p>
+
+
+
+        <section class="inputs">
+            <div>
+                <form>
+                    <div id="questionWrapper">
+                        <label for="question">Add Your Question</label>
+                        <div class="form-wrapper">
+                            <input type="text" name="question" id="question" placeholder="what is your question">
+                            <img id="addQuestion" class="plus" src="images/plus.png" alt="">
+                        </div>
+                    </div>
+                    <div id="answerWrapper">
+                        <label for="answer">Add an answer</label>
+                        <div class="form-wrapper">
+                            <input type="text" placeholder="add a possible answer" name="answer" id="answer">
+                            <img id="addAnswer" class="plus" src="images/plus.png" alt="">
+                        </div>
+                    </div>
+                    <button id="getAnswer">Get Your Answer</button>
+                
+                </form>
+            </div>
+            <div>
+                <h2>Summary</h2>
+                <p>This is the summary of the information you have given me so far. Whenever you are ready, click the <strong>get my answer</strong> button and I will get to work!</p>
+                <h3>Your Question</h3>
+                <p id="questionText">
+                    This is the question right here?
+                </p>
+                <ul id="answers">
+                    <li>This is a possible answer but longer</li>
+                    <li>This is a possible answer</li>
+                    <li>This is a possible answer</li>
+                    <li>This is a possible answer</li>
+                    <li>This is a possible answer</li>
+                    <li>This is a possible answer</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        
+
+
+        <p id="computerAnswer"></p>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

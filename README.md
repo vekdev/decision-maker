@@ -1,0 +1,1 @@
+Welcome to the DECISION MAKER! This is a silly, just for fun project using only vanilla HTML, CSS and JS to demonstrate the ability to manipulate the DOM (I mean the Document Object Model by the way - not my cousin Dom, who I would never manipulate, obviously ;-))

@@ -1,0 +1,161 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    --color-blue: rgb(214, 229, 249);
+    --color-green: rgb(96, 142, 144);
+}
+
+header {
+    /* min-height: 200px; */
+    background: #333333;
+    color: whitesmoke;
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header p {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p.intro {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 800px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-bottom: .6rem;
+}
+
+p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+ul#answers {
+    list-style: none;
+}
+
+ul#answers li {
+    display: inline-block;
+    background: #f8f8f8;
+    border-radius: 7px;
+    padding: 0.4rem 0.8rem;
+    margin: 0.1rem 0;
+}
+
+section.inputs {
+    position: relative;
+    display: grid;
+    max-width: 1000px;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* section.inputs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    background: black;
+} */
+
+form {
+    font-family: inherit;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid black;
+    box-shadow: 10px 10px 0 black, -10px -10px 0 black;
+    padding: 2rem;
+    border-radius: 7px;
+    transition: box-shadow 100ms ease-in-out
+}
+
+form:hover {
+    box-shadow: none;
+}
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+#answerWrapper {
+    display: none;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    border: 0;
+    background: var(--color-blue);
+    font-size: 1.2rem;
+}
+
+input::placeholder {
+    font-size: 0.6rem;
+    color: var(--color-green);
+}
+
+img.plus {
+    width: 30px;
+    transition: opacity 300ms ease-in-out;
+}
+
+img.plus:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+button {
+    border: 0;
+    background: var(--color-green);
+    display: inline-block;
+    width: max-content;
+    color: var(--color-blue);
+    padding: 0.6rem 1rem;
+    transition: all 300ms ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--color-blue);
+    color: var(--color-green);
+}
+
+#computerAnswer {
+    text-align: center;
+}
