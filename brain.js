@@ -21,7 +21,7 @@ document.getElementById("questionWrapper").addEventListener("submit", (e) => {
     if (questionEntryField.value) {
         questionTextParagraph.textContent = questionEntryField.value
         questionEntryField.value = ""
-        answerWrapper.style.display = "block"
+        answerWrapper.style.opacity = 1
         questionWrapper.style.display = "none"
     }
 })
@@ -46,8 +46,8 @@ function populateAnswers(answer) {
     enteredAnswersList.appendChild(newLine)
 }
 
-questionEntryField.addEventListener("keyup", () => {
-    console.log("KEY PRESSED")
-    questionTextParagraph.textContent = questionEntryField.value
-})
+// questionEntryField.addEventListener("keyup", () => {
+//     console.log("KEY PRESSED")
+//     questionTextParagraph.textContent = questionEntryField.value
+// })
 
