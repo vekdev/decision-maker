@@ -4,6 +4,11 @@ const questionEntryField = document.getElementById("question")
 const questionTextParagraph = document.getElementById("questionText")
 const questionWrapper = document.getElementById("questionWrapper")
 const answerWrapper = document.getElementById("answerWrapper")
+const summarySection = document.getElementById("summary")
+
+window.onload = () => {
+    
+}
 
 let userAnswers = []
 
@@ -19,10 +24,13 @@ document.getElementById("answerWrapper").addEventListener("submit", e => {
 document.getElementById("questionWrapper").addEventListener("submit", (e) => {
     e.preventDefault()
     if (questionEntryField.value) {
+        summarySection.style.gridTemplateRows = "1fr"
+        summarySection.style.opacity = "1"
         questionTextParagraph.textContent = questionEntryField.value
-        questionEntryField.value = ""
+        answerWrapper.style.height = "100%"
         answerWrapper.style.opacity = 1
         questionWrapper.style.display = "none"
+        answer.setAttribute("placeholder", `Add a possible answer for '${questionEntryField.value}'`)
     }
 })
 

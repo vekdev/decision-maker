@@ -50,14 +50,27 @@ p.intro {
     max-width: 800px;
 }
 
+p#questionText {
+    font-size: 3.5rem;
+}
+
+p.shaded {
+    background: var(--color-blue);
+    padding: 1rem;
+    border-radius: 7px;
+    color: var(--color-green);
+}
+
 h2 {
     margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 h3 {
     text-transform: uppercase;
-    font-size: .8rem;
-    margin-bottom: .6rem;
+    font-size: .6rem;
+    margin-top: 3rem;
+    margin-bottom: .1rem;
 }
 
 p:not(:last-child) {
@@ -66,6 +79,7 @@ p:not(:last-child) {
 
 ul#answers {
     list-style: none;
+    margin-bottom: 1rem;
 }
 
 ul#answers li {
@@ -76,38 +90,33 @@ ul#answers li {
     margin: 0.1rem;
 }
 
-section.inputs {
-    position: relative;
-    display: grid;
-    max-width: 1000px;
-    margin-top: 2rem;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+.data-section {
+    margin: 3rem auto 2rem auto;
+    width: 70%;
+    max-width: 900px;
 }
 
-/* section.inputs::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 1px);
-    width: 2px;
-    background: black;
-} */
+#summary {
+    width: 90%;
+    text-align: center;
+    margin-top: 3rem;
+    max-width: 700px;
+    display: grid;
+    grid-template-rows: 1fr;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+}
+
+#summary div {
+    overflow: hidden;
+}
 
 form {
     font-family: inherit;
-    width: 70%;
-    max-width: 900px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 1px solid var(--color-green);
-    box-shadow: -20px 20px 0 var(--color-green);
-
-    padding: 2rem;
-    border-radius: 7px;
-    transition: box-shadow 500ms ease-in-out
 }
 
 form:hover {
@@ -119,29 +128,44 @@ form:hover {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 5px 0;
 }
 
 #answerWrapper {
+    height: 0;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 300ms ease-in-out;
 }
 
 input[type="text"] {
     width: 100%;
     padding: 1.5rem 1rem;
-    border: 0;
+    border: 2px solid var(--color-green);
     /* background: var(--color-blue); */
-    background: #f8f8f8;
+    /* background: #f8f8f8; */
     /* border: 1px solid black; */
-    border-radius: 7px;
+    border-radius: 0 0 0 7px;
     font-size: 1rem;
     font-family: inherit;
-    transition: outline 300ms ease-in-out;
+
+    box-shadow: -5px 5px 0 var(--color-green), -5px 0 0 var(--color-green);
+    /* outline: 2px solid var(--color-green); */
+    transition: all 300ms ease-in-out;
 }
 
 input[type="text"]:focus-within {
-    outline: 2px solid var(--color-green);
+    outline: 2px solid black;
+    box-shadow: -5px 5px 0 var(--color-blue), -5px 0 0 var(--color-blue);
+}
+
+label {
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    color: var(--color-green);
+    text-transform: uppercase;
+    background: var(--color-blue);
+    box-shadow: -5px 5px 0 var(--color-green);
+    border: 2px solid var(--color-green);
+    border-bottom: 0;
+    border-radius: 7px 7px 0 0;
 }
 
 input::placeholder {
@@ -160,19 +184,25 @@ img.plus:hover {
 }
 
 button {
-    border: 0;
+    border: 2px solid var(--color-green);
+    font-size: 1.01rem;
     background: var(--color-green);
     display: inline-block;
     width: max-content;
     color: var(--color-blue);
-    padding: 0.6rem 1rem;
+    padding: 1.5rem 1rem;
     transition: all 300ms ease-in-out;
+}
+
+button[type="submit"] {
+    border-radius: 0 7px 7px 0;
 }
 
 button:hover {
     cursor: pointer;
     background: var(--color-blue);
     color: var(--color-green);
+    border-color: var(--color-green);
 }
 
 #computerAnswer {
